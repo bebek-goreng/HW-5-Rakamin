@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="container mt-4 ">
+        <div class="row text-center">
+            <h1 class="fs-3">WEBSITE MILIK PANITIA HARI KIAMAT</h1>
+        </div>
+
+        <!-- Navtabs -->
+        <nav class="mt-3">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-register-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-register" type="button" role="tab" aria-controls="nav-register"
+                    aria-selected="true">Register</button>
+
+                <button class="nav-link" id="nav-list-tab" data-bs-toggle="tab" data-bs-target="#nav-list" type="button"
+                    role="tab" aria-controls="nav-list" aria-selected="false">List Member</button>
+            </div>
+        </nav>
+
+        <!-- Tab content Register -->
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-register" role="tabpanel" aria-labelledby="nav-register-tab"
+                tabindex="0">
+                <div class="container ">
+                    <div class="row">
+                        <div class="register-form d-flex col-md-6 justify-content-center align-items-center">
+                            <form id="formRegistrasi">
+                                <div class="registrasi">
+                                    <h1 class="h3 mb-3 fw-700 fs-5 text-center">Pendaftaran Masuk Surga</h1>
+                                    <p class="mb-4 text-center">Apakah boleh seperti ini bwang?</p>
+                                    <div class="mb-3">
+                                        <label for="nama" class="form-label">Nama</label>
+                                        <input type="text" class="form-control h-50" id="nama"
+                                            placeholder="Masukan Nama">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="umur" class="form-label">Umur</label>
+                                        <input type="number" class="form-control h-50" id="umur"
+                                            placeholder="Masukan Umur">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="uangsangu" class="form-label">Uang Sangu</label>
+                                        <input type="number" class="form-control h-50" id="uangsangu"
+                                            placeholder="Uang jajan">
+                                    </div>
+                                    <div class="mb-4">
+                                        <button class="btn w-100 py-2 mt-3" type="submit">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="image-register col-md-6">
+                            <img src="./img/ara ara.jpeg" class="img-fluid" alt="gambar-biar-ga-kosong">
+                        </div>
+                    </div>
+                        
+                </div>
+            </div>
+
+            <!-- Tab content list register -->
+            <div class="tab-pane fade" id="nav-list" role="tabpanel" aria-labelledby="nav-list-tab" tabindex="0">
+                <div class="container">
+                    <div class="row table-responsive">
+                        <h4 class="text-center fs-5 mb-5">Daftar Calon Penghuni Surga</h4>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Nama</th>
+                                    <th>Umur</th>
+                                    <th>Uang Jajan</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <th>1. </th>
+                                    <td>Mahen Ganteng</td>
+                                    <td>17</td>
+                                    <td>Rp.1000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>Rata-rata usia member calon penghuni surga: <span class="usia"></span></p>
+                        <p>Rata-rata uang member calon penghuni surga: <span class="uangsangu"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
