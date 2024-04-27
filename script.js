@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // kita ambil value dari id dibawah ini 
         const nama = document.getElementById('nama').value;
         //Firts time nyobain regex expression, belum terlalu ngerti but its ok (ini buat bikin huruf setelah space jadi capital)
-        const capitalizedNama = nama.toLowerCase().replace(/\b\w/g, function(char) {
+        const capitalizedNama = nama.toLowerCase().replace(/\b\w/g, function (char) {
             return char.toUpperCase();
         });
 
@@ -90,6 +90,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Aku dapet masukan dari sepuh beberapa waktu lalu, katanya kalau casenya ada lebih dari 3 atau 4 lebih baik pakai switch, is that true? btw validasi inputku mantab ga mas?? wkwk
         switch (true) {
+            case !nama || !umur || !uangSangu:
+                alert('Isi formulirmu tidak lengkap woyy!');
+                return;
             case capitalizedNama.length < 10:
                 alert('Nama harus memiliki minimal 10 karakter');
                 return;
@@ -103,9 +106,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else if (uangSangu < 100000) {
                     alert('Pendaftaran gagal! Kamu masih miskin, lebih semangat kerjanya!!!');
                     return;
-                } 
-                default:
-                //di sini aku kosongi aja karena aku tidack butuhh block ini, ini block opsional kan mas default?? apakah harus ada isinya??
+                }
+            default:
+                break;
+            //di sini aku kosongi aja karena aku tidack butuhh block ini, ini block opsional kan mas default?? apakah harus ada isinya??
         }
 
 
@@ -113,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         try {
             // pakai await lagii arrrghh aing maung
-            const message = await listMembers.addMember(member); 
+            const message = await listMembers.addMember(member);
             await listMembers.addMemberToTable(member, listMembers.members.length - 1);
             listMembers.displayAverage();
 
@@ -126,5 +130,3 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
-// Program selesai, aku kemaren denger dari temennya temennya temenku, doi juga ikut bootcamp. Katanya ada mentornya yang ga ngasih nilai 100 ke apps buatannya padahal udah bagus eh besoknya kena stroke ringan mentornya. Tapi ini katanya temennya temenku mas 
